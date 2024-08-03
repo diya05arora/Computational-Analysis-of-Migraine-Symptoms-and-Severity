@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migraine Prediction</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Riot&display=swap" rel="stylesheet">
+    <script>
+        function validateForm() {
+            let inputs = document.querySelectorAll('input[type="number"]');
+            for (let input of inputs) {
+                if (input.value === "") {
+                    alert("Please fill out all fields.");
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Migraine Prediction</h1>
+        <form action="/predict" method="post" onsubmit="return validateForm()">
+            <label for="Age">AGE (years)</label>
+            <input type="number" name="Age" placeholder="Enter Age in years" min="0" required>
+            
+            <label for="Duration">DURATION (days)</label>
+            <input type="number" name="Duration" placeholder="Enter Duration of symptoms in last episode in days" min="0" required>
+            
+            <label for="Frequency">FREQUENCY (per month):</label>
+            <input type="number" name="Frequency" placeholder="Enter Frequency of episodes per month" min="0" required>
+            
+            <label for="Location">LOCATION
+                <br>
+                0 : None
+                <br>
+                1 : Unilateral
+                <br>
+                2 : Bilateral
+            </label>
+            <input type="number" name="Location" placeholder="Enter 0 for None, 1 for Unilateral and 2 for Bilateral" min="0" required>
+            
+            <label for="Character">CHARACTER
+                <br>
+                0 : None
+                <br>
+                1 : Throbbing
+                <br>
+                2 : Constant
+            </label>
+            <input type="number" name="Character" placeholder="Enter 0 for None, 1 for Throbbing and 2 for Constant pain" min="0" required>
+            
+            <label for="Intensity">INTENSITY
+                <br>
+                0 : None
+                <br>
+                1 : Mild
+                <br>
+                2 : Medium
+                <br>
+                3 : Severe
+            </label>
+            <input type="number" name="Intensity" placeholder="Enter 0 for None, 1 for Mild, 2 for Medium and 3 for Severe" min="0" required>
+            
+            <label for="Nausea">NAUSEA
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="Nausea" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="Vomit">VOMIT
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="Vomit" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="Phonophobia">PHONOPHOBIA
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="Phonophobia" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="Photophobia">PHOTOPHOBIA
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="Photophobia" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="Visual">VISUAL</label>
+            <input type="number" name="Visual" placeholder="Enter number of reversible visual symptoms" min="0" required>
+            
+            <label for="Sensory">SENSORY</label>
+            <input type="number" name="Sensory" placeholder="Enter number of reversible sensory symptoms" min="0" required>
+            
+            <label for="Dysphasia">DYSPHASIA
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="Dysphasia" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="Dysarthria">DYSARTHRIA
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="Dysarthria" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="Vertigo">VERTIGO
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="Vertigo" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="Tinnitus">TINNITUS
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="Tinnitus" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="Hypoacusis">HYPOACUSIS
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="Hypoacusis" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="Diplopia">DIPLOPIA
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="Diplopia" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="Defect">DEFECT
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="Defect" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="Ataxia">ATAXIA
+                <br>
+                0 : No
+                <br>
+                1 : Yes
+            </label>
+            <input type="number" name="Ataxia" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="Conscience">CONSCIENCE
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="Conscience" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="Paresthesia">PARESTHESIA
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="Paresthesia" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <label for="DPF">DPF:
+                <br>
+                0 : No
+                <br>
+                1 : Yes</label>
+            <input type="number" name="DPF" placeholder="Enter 0 for No and 1 for Yes" min="0" required>
+            
+            <input type="submit" value="Predict">
+        </form>
+        {% if prediction_text %}
+            <div class="result" id="result">
+                <h3>{{ prediction_text }}</h3>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
