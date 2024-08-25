@@ -1,0 +1,18 @@
+Type Predition   
+        random forest=95.29
+        decesion tree=92.15
+        knn=88.48
+        dnn=92.90
+        svm =92.15
+        logisctic=90.58
+        ann=92.31
+
+Intensity Prediction
+        LogisticRegression=80.10
+        Random Froest=76.96
+        Gradient Boosting Classifier=83.24
+        knn=78.01
+        svm=79.05
+        decesion tree=76.43
+
+            
