@@ -56,3 +56,8 @@ with st.form("prediction_form"):
         prediction = model.predict(features)
         st.subheader(f"The predicted type of migraine is: {prediction[0]}")
 
+
+
+
+
+
